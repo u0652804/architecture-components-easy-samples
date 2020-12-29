@@ -1,6 +1,7 @@
 # Android Architecture Components easy samples
 Study and do samples step by step about Architecture Components.
-References by [source of Google Github](https://github.com/android/architecture-components-samples)
+
+References by [source of Google Github](https://github.com/android/architecture-components-samples).
 
 ### EasySamples
 
