@@ -1,9 +1,24 @@
-# A easy sample for understand how to use MediatorLiveData
+# MediatorLiveData
 
-	addSource(LiveData<S> source, Observer<S> onChanged) : Starts to listen the given source LiveData, onChanged observer will be called when source value was changed.
+A easy sample for understand how to use MediatorLiveData
+
+### public functions of MediatorLiveData 
+
+ - addSource : Starts to listen the given source LiveData, onChanged observer will be called when source value was changed.
  
- removeSource(LiveData<S> toRemote) : Stops to listen the given LiveData.
+ - removeSource : Stops to listen the given LiveData.
 
+### Demo requirements :
+
+ - Show a count value on UI.
+
+ - When click TextView, count + 1.
+
+ - When count < 15, use liveData1 to update data and observer to update UI change.
+
+ - When count >= 15 and count < 25, color of text will be red color, use liveData2 to update data and observer to update UI change.
+ 
+ 
 ### presudo code :
 
 init liveData and MediatorLiveData
@@ -21,7 +36,11 @@ add liveData to MediatorLiveData
                 //... do something
                 // liveDataMerger.setValue(...) to trigger onChange
             }
-        });    
+        });   
+	
+remove liveData added to MediatorLiveData
+
+	liveDataMerger.removeSource(liveData1);
 
 init viewModel and observe MediatorLiveData
 
@@ -33,16 +52,6 @@ init viewModel and observe MediatorLiveData
                 //... do something about UI update
             }
         });   
-
-### Demo requirements :
-
- - Show a count value on UI.
-
- - When click TextView, count + 1.
-
- - When count < 15, use liveData1 to update data and observer to update UI change.
-
- - When count >= 15 and count < 25, color of text will be red color, use liveData2 to update data and observer to update UI change.
 
 ### references
 
