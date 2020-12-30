@@ -26,6 +26,10 @@ init liveData and MediatorLiveData
     MediatorLiveData liveDataMerger;
     MutableLiveData<Integer> liveData1;
     MutableLiveData<Integer> liveData2;
+    
+    liveData1 = new MediatorLiveData<>();
+    liveData2 = new MediatorLiveData<>();
+    liveDataMerger = new MediatorLiveData<>();    
 
 add liveData to MediatorLiveData
 
