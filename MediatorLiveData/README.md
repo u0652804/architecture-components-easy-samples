@@ -1,6 +1,40 @@
 # A easy sample for understand how to use MediatorLiveData
 
-Demo requirements :
+	addSource(LiveData<S> source, Observer<S> onChanged) : Starts to listen the given source LiveData, onChanged observer will be called when source value was changed.
+ 
+ removeSource(LiveData<S> toRemote) : Stops to listen the given LiveData.
+
+### presudo code :
+
+init liveData and MediatorLiveData
+
+    MediatorLiveData liveDataMerger;
+    MutableLiveData<Integer> liveData1;
+    MutableLiveData<Integer> liveData2;
+
+add liveData to MediatorLiveData
+
+    liveDataMerger.addSource(liveData1, new Observer<Integer>() {
+
+            @Override
+            public void onChanged(Integer integer) {
+                //... do something
+                // liveDataMerger.setValue(...) to trigger onChange
+            }
+        });    
+
+init viewModel and observe MediatorLiveData
+
+     private TestViewModel testViewModel; 
+     testViewModel = ViewModelProviders.of(this).get(TestViewModel.class);
+        testViewModel.getLiveDataMerger().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                //... do something about UI update
+            }
+        });   
+
+### Demo requirements :
 
  - Show a count value on UI.
 
