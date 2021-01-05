@@ -1,4 +1,4 @@
-# MediatorLiveData
+# Transformations
 
 1. Two easy code for understand how to use map or switchMap of Transfromation for liveData
 
