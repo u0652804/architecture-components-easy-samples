@@ -14,4 +14,4 @@ References by [source of Google Github](https://github.com/android/architecture-
 
 ### application samples of MVVM
 
-* **[MVVMCustomerWebview](https://github.com/u0652804/EasyExLiveData)** - Shows how to use MutableLiveData to update UI with time per seconds counter.
+* **[MVVMCustomerWebview](https://github.com/u0652804/architecture-components-easy-samples/tree/main/MVVMCustomerWebview)** - Use customView, MVVM, intent as custom liveData with broadCastReceiver and map of Transformations to do a custom webView sample.
